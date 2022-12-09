@@ -1,37 +1,36 @@
 lockfileVersion: 5.4
 
-importers:
+specifiers:
+  '@antfu/ni': 0.18.8
+  '@types/node': 18.11.12
+  bumpp: 8.2.1
+  clean-publish: 4.0.1
+  dayjs: 1.11.7
+  esno: 0.16.3
+  prettier: 2.8.1
+  rimraf: 3.0.2
+  rome: 11.0.0
+  typescript: 4.9.4
+  unbuild: 1.0.2
+  vite: 4.0.0
+  vitest: 0.25.6
 
-  .:
-    specifiers:
-      '@antfu/ni': 0.18.8
-      '@types/node': 18.11.12
-      bumpp: 8.2.1
-      clean-publish: 4.0.1
-      dayjs: 1.11.7
-      esno: 0.16.3
-      prettier: 2.8.1
-      rimraf: 3.0.2
-      rome: 11.0.0
-      typescript: 4.9.4
-      unbuild: 1.0.2
-      vite: 4.0.0
-      vitest: 0.25.6
-    dependencies:
-      dayjs: 1.11.7
-    devDependencies:
-      '@antfu/ni': 0.18.8
-      '@types/node': 18.11.12
-      bumpp: 8.2.1
-      clean-publish: 4.0.1
-      esno: 0.16.3
-      prettier: 2.8.1
-      rimraf: 3.0.2
-      rome: 11.0.0
-      typescript: 4.9.4
-      unbuild: 1.0.2
-      vite: 4.0.0_@types+node@18.11.12
-      vitest: 0.25.6
+dependencies:
+  dayjs: 1.11.7
+
+devDependencies:
+  '@antfu/ni': 0.18.8
+  '@types/node': 18.11.12
+  bumpp: 8.2.1
+  clean-publish: 4.0.1
+  esno: 0.16.3
+  prettier: 2.8.1
+  rimraf: 3.0.2
+  rome: 11.0.0
+  typescript: 4.9.4
+  unbuild: 1.0.2
+  vite: 4.0.0_@types+node@18.11.12
+  vitest: 0.25.6
 
 packages:
 
@@ -2479,3 +2478,5 @@ packages:
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
+
+publishDirectory: package

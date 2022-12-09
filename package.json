@@ -1,7 +1,7 @@
 {
   "name": "@iamkhan21/base-utils",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "author": "Ivan Khanevich <mail@iamkhan.tech>",
   "license": "MIT",
@@ -35,6 +35,7 @@
     "release": "run-s clean bumpp build publish",
     "clean": "rimraf ./dist && rimraf ./package",
     "build": "unbuild",
+    "bumpp": "bumpp",
     "publish": "clean-publish",
     "postpublish": "nr clean",
     "test": "vitest",

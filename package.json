@@ -32,16 +32,16 @@
     }
   },
   "scripts": {
-    "prepublishOnly": "rimraf ./package && nr build",
-    "publish": "clean-publish",
-    "postpublish": "rimraf ./dist && rimraf ./package",
+    "release": "run-s clean bumpp build publish",
+    "clean": "rimraf ./dist && rimraf ./package",
     "build": "unbuild",
-    "release": "bumpp && nr publish",
+    "publish": "clean-publish",
+    "postpublish": "nr clean",
     "test": "vitest",
     "format": "nx rome format ./src --write",
     "lint": "nx rome check ./src --apply-suggested",
-    "update:deps": "nu -i --latest && ni",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "update:deps": "nu -i --latest && ni"
   },
   "dependencies": {
     "dayjs": "1.11.7"
@@ -52,6 +52,7 @@
     "bumpp": "8.2.1",
     "clean-publish": "4.0.1",
     "esno": "0.16.3",
+    "npm-run-all": "4.1.5",
     "prettier": "2.8.1",
     "rimraf": "3.0.2",
     "rome": "11.0.0",

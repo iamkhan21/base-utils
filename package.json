@@ -1,7 +1,7 @@
 {
   "name": "@iamkhan21/base-utils",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": "Ivan Khanevich <mail@iamkhan.tech>",
   "license": "MIT",
@@ -31,9 +31,6 @@
       ]
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "unbuild",
     "prepublishOnly": "rimraf ./package && nr build",
@@ -61,6 +58,9 @@
     "unbuild": "1.0.2",
     "vite": "4.0.0",
     "vitest": "0.25.6"
+  },
+  "publishConfig": {
+    "directory": "package"
   },
   "clean-publish": {
     "access": "public",

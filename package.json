@@ -32,10 +32,11 @@
     }
   },
   "scripts": {
-    "build": "unbuild",
     "prepublishOnly": "rimraf ./package && nr build",
+    "publish": "clean-publish",
     "postpublish": "rimraf ./dist && rimraf ./package",
-    "release": "bumpp && clean-publish",
+    "build": "unbuild",
+    "release": "bumpp && nr publish",
     "test": "vitest",
     "format": "nx rome format ./src --write",
     "lint": "nx rome check ./src --apply-suggested",

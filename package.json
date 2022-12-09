@@ -32,12 +32,12 @@
     }
   },
   "scripts": {
-    "release": "run-s clean bumpp build publish",
     "clean": "rimraf ./dist && rimraf ./package",
     "build": "unbuild",
     "bumpp": "bumpp",
     "publish": "clean-publish",
     "postpublish": "nr clean",
+    "release": "run-s clean bumpp build publish",
     "test": "vitest",
     "format": "nx rome format ./src --write",
     "lint": "nx rome check ./src --apply-suggested",

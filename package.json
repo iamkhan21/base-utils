@@ -1,24 +1,22 @@
 {
-  "name": "pkg-name",
+  "name": "@iamkhan21/base-utils",
   "type": "module",
-  "version": "0.0.0",
-  "packageManager": "pnpm@7.12.0",
+  "version": "1.0.0",
   "description": "",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "Ivan Khanevich <mail@iamkhan.tech>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/pkg-name#readme",
+  "funding": "https://github.com/sponsors/iamkhan21",
+  "homepage": "https://github.com/iamkhan21/base-utils#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/pkg-name.git"
+    "url": "git+https://github.com/iamkhan21/base-utils.git"
   },
-  "bugs": "https://github.com/antfu/pkg-name/issues",
+  "bugs": "https://github.com/iamkhan21/base-utils/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
     }
   },
@@ -38,27 +36,42 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "dev": "unbuild --stub",
-    "lint": "eslint .",
-    "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
-    "start": "esno src/index.ts",
+    "prepublishOnly": "rimraf ./package && nr build",
+    "postpublish": "rimraf ./dist && rimraf ./package",
+    "release": "bumpp && clean-publish",
     "test": "vitest",
+    "format": "nx rome format ./src --write",
+    "lint": "nx rome check ./src --apply-suggested",
+    "update:deps": "nu -i --latest && ni",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "dayjs": "1.11.7"
+  },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.27.0",
-    "@antfu/ni": "^0.18.0",
-    "@antfu/utils": "^0.5.2",
-    "@types/node": "^18.7.18",
-    "bumpp": "^8.2.1",
-    "eslint": "^8.23.1",
-    "esno": "^0.16.3",
-    "pnpm": "^7.12.0",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.8.3",
-    "unbuild": "^0.8.11",
-    "vite": "^3.1.2",
-    "vitest": "^0.23.4"
+    "@antfu/ni": "0.18.8",
+    "@types/node": "18.11.12",
+    "bumpp": "8.2.1",
+    "clean-publish": "4.0.1",
+    "esno": "0.16.3",
+    "prettier": "2.8.1",
+    "rimraf": "3.0.2",
+    "rome": "11.0.0",
+    "typescript": "4.9.4",
+    "unbuild": "1.0.2",
+    "vite": "4.0.0",
+    "vitest": "0.25.6"
+  },
+  "clean-publish": {
+    "access": "public",
+    "tempDir": "package",
+    "files": [
+      ".idea",
+      "src",
+      "tsconfig.json",
+      "build.config.ts",
+      ".gitignore",
+      ".npmrc"
+    ]
   }
 }

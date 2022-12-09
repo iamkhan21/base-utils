@@ -2,7 +2,7 @@
   "name": "@iamkhan21/base-utils",
   "type": "module",
   "version": "1.0.3",
-  "description": "",
+  "description": "Utils which usually used in my projects",
   "author": "Ivan Khanevich <mail@iamkhan.tech>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/iamkhan21",

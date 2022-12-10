@@ -4,7 +4,7 @@ specifiers:
   '@antfu/ni': 0.18.8
   '@types/node': 18.11.12
   bumpp: 8.2.1
-  clean-publish: 4.0.1
+  clean-publish: 4.0.2
   dayjs: 1.11.7
   esno: 0.16.3
   npm-run-all: 4.1.5
@@ -23,7 +23,7 @@ devDependencies:
   '@antfu/ni': 0.18.8
   '@types/node': 18.11.12
   bumpp: 8.2.1
-  clean-publish: 4.0.1
+  clean-publish: 4.0.2
   esno: 0.16.3
   npm-run-all: 4.1.5
   prettier: 2.8.1
@@ -874,13 +874,13 @@ packages:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
     dev: true
 
-  /clean-publish/4.0.1:
-    resolution: {integrity: sha512-6v0bh5kQD5FDlxBgXDVNNc6KmAB7iIP/GHD91q9xsGVZT5XB9Y8TNqB7dL5u9PTZlBeLpBw+A1AseRlEEJLSWA==}
+  /clean-publish/4.0.2:
+    resolution: {integrity: sha512-WLg3deN5jTs6W3JjioTywlfmFMvOFTTwkhUQ6QJ/6b4Um7pqOM5g/NivYnUFTasi3j3BARAP6HIKxGWlWPJ8hw==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       lilconfig: 2.0.6
       micromatch: 4.0.5
     dev: true
@@ -1730,6 +1730,17 @@ packages:
       micromatch: 4.0.5
     dev: true
 
+  /fast-glob/3.2.12:
+    resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+    dev: true
+
   /fastq/1.13.0:
     resolution: {integrity: sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw==}
     dependencies:
@@ -1850,7 +1861,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       dir-glob: 3.0.1
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 4.0.0
